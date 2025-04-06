@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Freya - Therapy Bot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+  <script defer src="{{ url_for('static', filename='js/home.js') }}"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">FREYA</div>
+    <nav>
+        <a href="{{ url_for('home') }}" class="{% if request.endpoint == 'home' %}active{% endif %}">Home</a>
+        <a href="{{ url_for('freya') }}" class="{% if request.endpoint == 'freya' %}active{% endif %}">Freya</a>
+        <a href="{{ url_for('about') }}" class="{% if request.endpoint == 'about' %}active{% endif %}">About Us</a>
+        <a href="{{ url_for('login') }}" class="{% if request.endpoint == 'login' %}active{% endif %}">Log In</a>
+      </nav>
+      
+  </header>
+
+  <section class="hero">
+    <h1>HELPING YOU HEAL, ONE CONVERSATION AT A TIME</h1>
+
+    <div class="bot-bubble">My name is Freya, and I'm here to offer you a safe and supportive space.</div>
+
+    <div class="bot-section">
+      <img src="{{ url_for('static', filename='images/Freya_woman_photo.png') }}" 
+           alt="Freya Avatar" 
+           class="freya-img" 
+           onclick="location.href='{{ url_for('freya') }}'" 
+           style="cursor: pointer;" />
+      <input class="chat-bar" 
+             type="text" 
+             placeholder="Feeling something? Type it out, I’m here to listen" 
+             onclick="location.href='{{ url_for('freya') }}'" />
+      <button class="register-button" 
+              onclick="location.href='{{ url_for('login') }}'">Register</button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      Contact Us: 7989098989
+    </div>
+  </footer>
+
+</body>
+</html>
