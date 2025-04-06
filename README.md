@@ -1,3 +1,3 @@
 # Phoenix
 
-The files are uploaded as a ZIP file you can download and extract it to run the codes
+The files are uploaded as a ZIP file as well you can download the entire folder and extract it to run the codes
