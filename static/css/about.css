@@ -1,0 +1,99 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Body */
+  body {
+    background-color: #2f5b46;
+    color: white;
+    min-height: 100vh;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #2f5b46;
+  }
+  
+  .logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  
+  nav a {
+    margin-left: 2rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  nav a.active {
+    font-weight: bold;
+    color: #55e290;
+}
+  
+  /* Main content */
+  main h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+  
+  .testimonials-container {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px 60px;
+  }
+  
+  .testimonials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    max-width: 1400px;
+    width: 100%;
+  }
+  
+  .testimonial {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimonial img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px; /* ✅ Square with slightly rounded corners */
+  }
+  
+  .testimonial-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .quote {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  
+  .author {
+    font-weight: bold;
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+  

@@ -1,0 +1,160 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-image: url('/static/images/bonsai.png'); /* Direct path to the static folder */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Required for the overlay */
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(47, 91, 70, 0.9); /* Dark green overlay with 70% opacity */
+    z-index: -1; /* Places the overlay behind the content */
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #2f5b46; /* Match body background */
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+nav a {
+    margin-left: 2rem;
+    color: white; /* White text for better contrast */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a.active {
+    font-weight: bold;
+    color: #55e290; /* Highlight color for the active link */
+}
+/* Hero Section Styling */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    padding: 20px 20px 100px 20px; /* Padding for the hero section */
+}
+
+.hero h1 {
+    font-family: Montesserat, sans-serif; /* Custom font for the title */
+    font-size: 50px;
+    max-width: 700px;
+    padding-top: 20px;
+    padding-left: 30px;
+    margin-bottom: 3rem;
+    padding-bottom: 100px;
+}
+
+.bot-bubble{
+    margin-left: 200px;
+}
+/* Bot Section Styling */
+.bot-section {
+    margin-top: 170px;
+    display: flex;
+    align-items: flex-end; /* Align items to bottom */
+    background-color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    gap: 2rem;
+    height: 70px;
+}
+
+.freya-img {
+    margin-top: 50px;
+    align-items: center;
+    width: 215px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.bot-bubble {
+    background-color: #f0f0f0;
+    color: black;
+    padding: 1rem 1.5rem;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    max-width: 500px;
+}
+
+
+.register-button {
+    background-color: #13c65d; /* Green button */
+    color: white; /* White text */
+    padding: 0.8rem 2rem; /* Button size */
+    font-size: 1rem; /* Font size */
+    font-weight: 600; /* Bold text */
+    border-radius: 999px; /* Fully rounded button */
+    border: none; /* Remove default border styling */
+    cursor: pointer;
+    position: fixed; /* Fix position relative to viewport */
+    bottom:165px; /* Distance from the bottom of the viewport */
+    right: 2rem; /* Distance from the right of the viewport */
+}
+.chat-bar {
+    position: fixed;
+    margin-top: 2500px;
+    width: 100%;
+    margin-top: 0px;
+    padding-top: 10px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bot-section input {
+    position: fixed;
+    align-items: left;
+    justify-content: left;
+    max-width: 800px;
+    font-size:20px;
+    bottom: 175px;
+    border: none;
+    outline: none;
+}
+
+footer {
+  text-align: center;
+  height: 50px;
+  padding: 10px;
+  background-color: #2e683f;
+  font-size: 14px;
+  color: #ffffff;
+}
+.footer-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
